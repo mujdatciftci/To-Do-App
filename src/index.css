@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+.app-container {
+       @apply bg-[#352f5b] h-screen text-white flex flex-col items-center pt-[100px];
+     }
+.app-title {
+       @apply text-[64px] font-bold text-center;
+}
+
+.app-img {
+       @apply absolute bottom-0 left-0 object-cover w-[25%];
+}
+
+.todolist-container {
+       @apply flex flex-col gap-[30px] mt-[30px];
+}
+
+.todolist-btn-add {
+       @apply text-xl font-semibold bg-[#317000] rounded-[10px] w-[200px] h-[40px] ml-auto;
+}
+
+.todolist-btn-remove {
+       @apply text-xl font-semibold bg-[#FF6363] rounded-[10px] w-[200px] h-[40px] ml-auto;
+}
+
+.itemlist-header {
+       @apply w-[1000px] grid grid-cols-12 items-center mb-5;
+}
+
+.itemlist-item {
+       @apply grid grid-cols-12 items-center bg-[#423A6F] h-[60px] mb-2;
+}
+
+.itemlist-checkbox {
+       @apply mx-auto accent-[#70FF00] scale-110;
+}
+
+.itemlist-edit {
+       @apply text-[18px] text-[#F3FF6B];
+}
+
+.itemlist-remove {
+       @apply text-[25px] text-[#FF6363];
+}
+
+
 
 /* 
 #2A2649 input

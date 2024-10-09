@@ -1,10 +1,13 @@
+import ToDoList from "./components/ToDoList";
+import bgImage from "./assets/bg-img.png";
 
-import './index.css';
 
 function App() {
   return (
-    <div >
-      
+    <div className="app-container" >
+      <h1 className="app-title">To Do List</h1>
+      <ToDoList />
+      <img src={bgImage} alt="background-image" className="app-img" />
     </div>
   );
 }
