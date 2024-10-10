@@ -15,7 +15,7 @@ const ItemList = () => {
        <ul className="w-[1000px]">
             <li className="itemlist-item">
               <PiDotsSixBold className="text-[25px] mx-auto hover:cursor-move" />
-              <p className="col-start-2 col-end-10 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima!</p>
+              <p className="col-start-2 col-end-10 "></p>
               <input type="checkbox" name="status" id="" className="itemlist-checkbox"/>
               <button className="mx-auto"><SlPencil className="itemlist-edit" /></button>
               <button className="mx-auto"><IoTrashOutline className="itemlist-remove" /></button>
