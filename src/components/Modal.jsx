@@ -1,11 +1,14 @@
-const Modal = ({children }) => {
+
+import ReactDOM from "react-dom";
+import Overlays from "./Overlays";
+import ModalForm from "./ModalForm";
+
+const Modal = ({children, setIsModalOpen}) => {
   
   return (
     <div>
-      <div className="fixed top-0 left-0 h-screen w-screen bg-primary bg-opacity-50"></div>
-      <div className="fixed bg-gray-200 p-4 rounded-lg w-[600px] h-[220px] mx-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-[120%]">
-        {children}
-      </div>
+      {ReactDOM.createPortal(<Overlays setIsModalOpen={setIsModalOpen}/>, document.getElementById("overlays"))}
+      {ReactDOM.createPortal(<ModalForm>{children}</ModalForm>, document.getElementById("overlays"))} 
     </div>
   );
 }

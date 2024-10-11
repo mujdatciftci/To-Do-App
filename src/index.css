@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .app-container {
        @apply bg-[#352f5b] h-screen text-white flex flex-col items-center pt-[100px];
      }
@@ -18,11 +19,11 @@
 }
 
 .todolist-btn-add {
-       @apply text-xl font-semibold bg-[#317000] rounded-[10px] w-[200px] h-[40px] ml-auto;
+       @apply text-xl text-white font-semibold bg-[#317000] rounded-[10px] w-[140px] h-[40px] ml-auto;
 }
 
 .todolist-btn-remove {
-       @apply text-xl font-semibold bg-[#FF6363] rounded-[10px] w-[200px] h-[40px] ml-auto;
+       @apply text-xl font-semibold bg-[#FF6363] rounded-[10px] w-[140px] h-[40px] ml-auto;
 }
 
 .itemlist-header {
