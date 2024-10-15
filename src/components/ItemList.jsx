@@ -1,8 +1,7 @@
-import { useState } from "react";
 import { motion, AnimatePresence, Reorder } from "framer-motion";
 import Item from "./Item";
 
-const ItemList = ({items,setItems,setIsModalOpen,setInputText}) => {
+const ItemList = ({items,setItems}) => {
   
   return (
     <div className="min-h-[100px]">
@@ -24,14 +23,11 @@ const ItemList = ({items,setItems,setIsModalOpen,setInputText}) => {
         <AnimatePresence>
           {items.map((item) => (
             <Item
-              items={items}
               setItems={setItems}
-              setInputText={setInputText}
-              setIsModalOpen={setIsModalOpen}
-              key={item.id}
               item={item}
+              key={item.id}
             />
-          ))}
+          ))} 
         </AnimatePresence>
       </Reorder.Group>
     </div>

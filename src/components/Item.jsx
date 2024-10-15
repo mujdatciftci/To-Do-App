@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion, Reorder } from "framer-motion";
 import { PiDotsSixBold } from "react-icons/pi";
 import { SlPencil } from "react-icons/sl";
 import { IoTrashOutline } from "react-icons/io5";
 
 
-const Item = ({ items, setItems, item, setIsModalOpen, setInputText }) => {
-  const [editItemName, setEditItemName] = useState("");
+const Item = ({setItems, item,}) => {
+ 
 
   const handleStatus = (idFromCheckbox) => {
     setItems((prev) =>
@@ -16,24 +16,8 @@ const Item = ({ items, setItems, item, setIsModalOpen, setInputText }) => {
     );
   };
 
-  const handleEdit = (idFromEdit) => {
-    setIsModalOpen(true);
-    setEditItemName(items.find((item) => item.id === idFromEdit).taskName);
-    setInputText(editItemName);
-  };
-
-  const handleUpdateTask = (id) => {
-    setItems((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, taskName: editItemName } : item
-      )
-    );
-    setIsModalOpen(false);
-  };
-
   return (
-
-       <Reorder.Item
+    <Reorder.Item
       value={item}
       className="itemlist-item flex items-center p-2"
       whileDrag={{ scale: 1.02, zIndex: 1 }}
@@ -60,7 +44,6 @@ const Item = ({ items, setItems, item, setIsModalOpen, setInputText }) => {
       <motion.button
         whileHover={{ scale: 1.2 }}
         className="mx-auto"
-        onClick={() => handleEdit(item.id)}
       >
         <SlPencil className="itemlist-edit" />
       </motion.button>
@@ -78,9 +61,7 @@ const Item = ({ items, setItems, item, setIsModalOpen, setInputText }) => {
           <IoTrashOutline className="itemlist-remove" />
         </motion.div>
       </motion.button>
-       </Reorder.Item>
-
-
+    </Reorder.Item>
   );
 };
 
