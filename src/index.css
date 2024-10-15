@@ -46,6 +46,10 @@
        @apply text-[25px] text-[#FF6363];
 }
 
+.box-shadow {
+       box-shadow: 7px 7px 16px #2e294f, -7px -7px 16px #3c3567;
+}
+
 
 
 /* 

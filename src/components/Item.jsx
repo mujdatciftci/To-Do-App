@@ -21,7 +21,7 @@ const Item = ({setItems, item,}) => {
       value={item}
       className="itemlist-item flex items-center p-2"
       whileDrag={{ scale: 1.02, zIndex: 1 }}
-      initial={{ translateY: 30 }}
+      initial={{ translateY: 15 }}
       animate={{ translateY: 0 }}
       transition={{ duration: 0.5 }}
       exit={{ translateX: 100, opacity: 0, transition: { duration: 0.2 } }}
